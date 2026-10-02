@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ алгоритмов сортировки - Лабораторная работа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .graph-container {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .graph-title {
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .conclusion {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .info-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Анализ алгоритмов сортировки</h1>
+        <h2>Лабораторная работа №3</h2>
+        <p>Сравнение производительности Bubble Sort, Comb Sort и Heap Sort</p>
+    </div>
+    
+    <div class="info-box">
+        <h3>📊 Информация о данных:</h3>
+        <p>• Размеры массивов: 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 25000, 50000 элементов</p>
+        <p>• Тестировались три случая: средний (случайный массив), уже отсортированный, обратно отсортированный</p>
+        <p>• Измерялись: количество сравнений и количество копирований элементов</p>
+    </div>
+    
+    <div class="graph-container">
+        <h2 class="graph-title">1. Полный анализ всех алгоритмов</h2>
+        <img src="graphs/full_analysis.png" alt="Полный анализ">
+    </div>
+    
+    <div class="graph-container">
+        <h2 class="graph-title">2. Сравнение с теоретическими оценками</h2>
+        <img src="graphs/theoretical_comparison.png" alt="Теоретическое сравнение">
+    </div>
+    
+    <div class="graph-container">
+        <h2 class="graph-title">3. Анализ трендов роста</h2>
+        <img src="graphs/trend_analysis.png" alt="Анализ трендов">
+    </div>
+    
+    <div class="graph-container">
+        <h2 class="graph-title">4. Сводные результаты</h2>
+        <img src="graphs/summary_chart.png" alt="Сводная диаграмма">
+    </div>
+    
+    <div class="graph-container">
+        <h2 class="graph-title">5. Средний случай (случайный массив)</h2>
+        <img src="graphs/comparison_Средний_случай_случайный_массив.png" alt="Средний случай">
+        <img src="graphs/individual_Средний_случай_случайный_массив.png" alt="Средний случай - индивидуально">
+    </div>
+    
+    <div class="graph-container">
+        <h2 class="graph-title">6. Уже отсортированный массив</h2>
+        <img src="graphs/comparison_Уже_отсортированный_массив.png" alt="Отсортированный массив">
+        <img src="graphs/individual_Уже_отсортированный_массив.png" alt="Отсортированный массив - индивидуально">
+    </div>
+    
+    <div class="graph-container">
+        <h2 class="graph-title">7. Обратно отсортированный массив</h2>
+        <img src="graphs/comparison_Обратно_отсортированный_массив.png" alt="Обратно отсортированный массив">
+        <img src="graphs/individual_Обратно_отсортированный_массив.png" alt="Обратно отсортированный массив - индивидуально">
+    </div>
+    
+    <div class="conclusion">
+        <h2>📈 Выводы:</h2>
+        <p><strong>Bubble Sort:</strong> Показывает квадратичную сложность O(n²). На отсортированных массивах работает быстро (O(n)), на обратно отсортированных - очень медленно.</p>
+        <p><strong>Comb Sort:</strong> Значительно быстрее Bubble Sort благодаря использованию уменьшающегося интервала. Приближается к O(n log n) в среднем случае.</p>
+        <p><strong>Heap Sort:</strong> Имеет стабильную сложность O(n log n) для всех случаев. Наибольшая эффективность на больших массивах.</p>
+        <p><strong>Общий вывод:</strong> Для небольших массивов можно использовать Bubble Sort, для средних - Comb Sort, для больших данных лучше всего подходит Heap Sort.</p>
+    </div>
+    
+    <div class="footer">
+        <p>Лабораторная работа по анализу алгоритмов сортировки</p>
+        <p>Сгенерировано автоматически • Все графики сохранены в формате PNG с высоким разрешением</p>
+    </div>
+</body>
+</html>
+    
